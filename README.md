@@ -1,4 +1,4 @@
-# uAI - buddy
+# uAI - Robot Buddy
 For anyone who wants to have or give an AI robot companion which is fully controlled by you!
 
 Don't let corporations spy on your loved ones with mirage magical toys!
