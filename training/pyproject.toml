@@ -1,0 +1,13 @@
+[tool.poetry]
+name = "buddy-training"
+version = "0.0.1"
+description = ""
+authors = ["lukeskywalker <lucas.cansino@mail.de>"]
+license = "GLWTS"
+
+[tool.poetry.dependencies]
+python = "~3.11"
+torch = "*"
+torchaudio = "*"
+torchvision = "*"
+genesis-world = "*"

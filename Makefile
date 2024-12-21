@@ -7,7 +7,7 @@ endif
 
 # Default target
 .PHONY: all
-all: train
+all: training
 
 
 USE_SUDO := $(shell which docker >/dev/null && docker ps 2>&1 | grep -q "permission denied" && echo sudo)
@@ -58,5 +58,7 @@ dev-copy-env:
 .PHONY: training
 training:
 	@echo "Running train.sh..."
-	@chmod +x ./train.sh
-	@./train.sh
+	@alejandra . &>/dev/null \
+  || ( alejandra . ; notify-send -e "☠️ formatting failed! Check the erro log and try again ... " --icon=software-update-available && exit 1)
+	@chmod +x ./training/train.sh
+	@cd training && ./train.sh
